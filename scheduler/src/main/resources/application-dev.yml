@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: info
+    'org.springframework': warn
+    'ru.spb.svga': warn
+server:
+  port: 8088
+  servlet:
+    context-path: '/dev'
