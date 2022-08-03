@@ -1,4 +1,4 @@
-package ru.spb.svga.timeslots.configuration;
+package ru.spb.svga.timeslots.scheduler.configuration;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.io.ClassPathResource;
-import ru.spb.svga.timeslots.configuration.properties.MessageSourceConfiguration;
-import ru.spb.svga.timeslots.service.messages.SchedulerMessageSourceImpl;
-import ru.spb.svga.timeslots.service.messages.locale.PropertyLocaleSupplier;
+import ru.spb.svga.timeslots.scheduler.configuration.properties.MessageSourceConfiguration;
+import ru.spb.svga.timeslots.scheduler.service.messages.SchedulerMessageSourceImpl;
+import ru.spb.svga.timeslots.scheduler.service.messages.locale.PropertyLocaleSupplier;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
@@ -19,7 +19,7 @@ import java.util.Properties;
 import java.util.function.Supplier;
 
 @Configuration
-@ConfigurationPropertiesScan("ru.spb.svga.timeslots.configuration.properties")
+@ConfigurationPropertiesScan("ru.spb.svga.timeslots.scheduler.configuration.properties")
 @RequiredArgsConstructor
 public class TimeslotsSchedulerConfiguration {
 

@@ -1,4 +1,4 @@
-package ru.spb.svga.timeslots.service.messages;
+package ru.spb.svga.timeslots.scheduler.service.messages;
 
 import org.springframework.context.MessageSource;
 

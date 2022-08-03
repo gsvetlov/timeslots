@@ -1,4 +1,4 @@
-package ru.spb.svga.timeslots.configuration.properties;
+package ru.spb.svga.timeslots.scheduler.configuration.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

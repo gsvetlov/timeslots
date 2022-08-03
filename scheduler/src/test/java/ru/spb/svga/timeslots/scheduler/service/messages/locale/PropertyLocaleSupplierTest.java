@@ -1,7 +1,7 @@
-package ru.spb.svga.timeslots.service.messages.locale;
+package ru.spb.svga.timeslots.scheduler.service.messages.locale;
 
 import org.junit.jupiter.api.Test;
-import ru.spb.svga.timeslots.configuration.properties.MessageSourceConfiguration;
+import ru.spb.svga.timeslots.scheduler.configuration.properties.MessageSourceConfiguration;
 
 import java.util.Locale;
 

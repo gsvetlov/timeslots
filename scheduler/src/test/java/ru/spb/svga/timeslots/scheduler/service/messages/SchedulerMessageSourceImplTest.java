@@ -1,9 +1,9 @@
-package ru.spb.svga.timeslots.service.messages;
+package ru.spb.svga.timeslots.scheduler.service.messages;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.spb.svga.timeslots.configuration.TimeslotsSchedulerConfiguration;
+import ru.spb.svga.timeslots.scheduler.configuration.TimeslotsSchedulerConfiguration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
