@@ -1,20 +1,20 @@
 package ru.spb.svga.timeslots;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
-@SpringBootApplication
 @Slf4j
+@SpringBootApplication
+@RequiredArgsConstructor
 public class TimeslotsSchedulerApp {
 
-    private static final String APP_START = "TimeslotsSchedulerApp starting";
-    private static final String APP_STOP = "TimeslotsSchedulerApp stopping";
+    private static final String APP_START = "timeslot.scheduler.starting";
+    private static final String APP_STOP = "timeslot.scheduler.stopping";
 
     public static void main(String[] args) {
-        log.trace(APP_START);
-        SpringApplication.run(TimeslotsSchedulerApp.class);
-        log.warn(APP_STOP);
-        log.trace(APP_STOP);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(TimeslotsSchedulerApp.class);
     }
 }
