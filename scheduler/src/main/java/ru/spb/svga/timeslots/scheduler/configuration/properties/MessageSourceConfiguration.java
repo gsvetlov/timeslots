@@ -16,12 +16,21 @@ public record MessageSourceConfiguration(Location location, LocaleSetting locale
         this.localeSetting = Objects.requireNonNullElseGet(localeSetting, getDefaultSettings());
     }
 
+    private Supplier<LocaleSetting> getDefaultSettings() {
+        return () -> new LocaleSetting(Locale.getDefault().getLanguage(),
+                                       Locale.getDefault().getCountry(),
+                                       Locale.getDefault().getVariant(),
+                                       Locale.getDefault().getVariant(),
+                                       LocaleSetting.DEFAULT_FALLBACK);
+    }
+
     public record Location(String bundle, String common) {
         public Location {
             Objects.requireNonNull(bundle);
             Objects.requireNonNull(common);
         }
     }
+
 
     public record LocaleSetting(String language, String country, String variant, String script, String fallback) {
         private static final String EMPTY = "";
@@ -34,13 +43,5 @@ public record MessageSourceConfiguration(Location location, LocaleSetting locale
             this.script = requireNonNullElse(script, EMPTY);
             this.fallback = requireNonNullElse(fallback, DEFAULT_FALLBACK);
         }
-    }
-
-    private Supplier<LocaleSetting> getDefaultSettings() {
-        return () -> new LocaleSetting(Locale.getDefault().getLanguage(),
-                                       Locale.getDefault().getCountry(),
-                                       Locale.getDefault().getVariant(),
-                                       Locale.getDefault().getVariant(),
-                                       LocaleSetting.DEFAULT_FALLBACK);
     }
 }
